@@ -2,6 +2,7 @@
     <test name="Navigation Tests">
         <classes>
             <class name="test.NavigationTest"/>
+<!--            <class name="test.LoginTest"/>-->
         </classes>
     </test>
 </suite>
