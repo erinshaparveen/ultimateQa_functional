@@ -2,7 +2,9 @@
     <test name="Navigation Tests">
         <classes>
             <class name="test.NavigationTest"/>
-<!--            <class name="test.LoginTest"/>-->
         </classes>
     </test>
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
 </suite>
