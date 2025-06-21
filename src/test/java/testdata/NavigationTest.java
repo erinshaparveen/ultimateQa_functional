@@ -1,4 +1,4 @@
-package test;
+package testdata;
 
 import base.BaseFile;
 import utils.TestDataReader;
@@ -11,7 +11,7 @@ public class NavigationTest extends BaseFile {
     @Test(description = "Verify valid login")
     public void testNavigationToSimpleElements() {
         HomePage home = new HomePage(driver);
-        home.clickSimpleElementsLink();
+        home.clickOnElement();
 
         String expectedUrl = TestDataReader.get("expectedUrl");
         String actualUrl = driver.getCurrentUrl();

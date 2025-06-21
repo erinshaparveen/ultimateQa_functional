@@ -1,7 +1,7 @@
 <suite name="Automation Suite">
     <test name="Navigation Tests">
         <classes>
-            <class name="test.NavigationTest"/>
+            <class name="testdata.NavigationTest"/>
         </classes>
     </test>
     <listeners>

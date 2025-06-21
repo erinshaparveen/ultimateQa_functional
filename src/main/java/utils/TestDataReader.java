@@ -9,7 +9,7 @@ public class TestDataReader {
 
     static {
         try {
-            FileInputStream fis = new FileInputStream("src/test/java/testdata/testdata.properties");
+            FileInputStream fis = new FileInputStream("src/main/java/testdata/testdata.properties");
             properties.load(fis);
         } catch (IOException e) {
             e.printStackTrace();
