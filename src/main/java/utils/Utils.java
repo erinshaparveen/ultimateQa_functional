@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class Utils {
 
@@ -48,6 +49,14 @@ public class Utils {
     public static boolean isSelected(WebDriver driver, String locatorKey) {
         By locator = LocatorReader.get(locatorKey);
         return driver.findElement(locator).isSelected();
+    }
+
+    // Move the Cursor Over the Element
+    public static void moveToElement(WebDriver driver, String locatorKey) {
+        By locator = LocatorReader.get(locatorKey);
+        WebElement element = driver.findElement(locator);
+        Actions ac=new Actions(driver);
+        ac.moveToElement(element).perform();
     }
 
 }

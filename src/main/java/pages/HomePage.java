@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import io.qameta.allure.Step;
 import utils.LocatorReader;
 import utils.Utils;
+import utils.Wait;
 
 public class HomePage {
     WebDriver driver;
@@ -40,5 +41,17 @@ public class HomePage {
         Utils.clickOnElement(driver, "newsletterlink");
     }
 
+    @Step("Move the Cursor Over the Education Text")
+    public void move_cursor_over_education()
+    {
+        Utils.moveToElement(driver, "educationText");
+    }
+
+    @Step("Verify that the Education list is displayed or not")
+    public boolean education_list_isDisplayed()
+    {
+        Wait.waitForVisibility(driver, "educationList");
+        return Utils.isDisplayed(driver, "educationList");
+    }
 
 }
