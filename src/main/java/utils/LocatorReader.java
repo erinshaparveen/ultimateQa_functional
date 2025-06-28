@@ -10,8 +10,12 @@ public class LocatorReader {
     private static Properties properties = new Properties();
 
     static {
-        try (FileInputStream fis = new FileInputStream("src/main/java/locator/HomePage.properties")) {
-            properties.load(fis);
+        try{
+            FileInputStream homePageFile = new FileInputStream("src/main/java/locator/HomePage.properties");
+            properties.load(homePageFile);
+
+            FileInputStream sessionPageFile = new FileInputStream("src/main/java/locator/FreeSession.properties");
+            properties.load(sessionPageFile);
         } catch (IOException e) {
             e.printStackTrace();
         }

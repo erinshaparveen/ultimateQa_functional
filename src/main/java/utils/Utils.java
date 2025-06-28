@@ -1,9 +1,12 @@
 package utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
+import java.util.List;
 
 public class Utils {
 
@@ -58,5 +61,21 @@ public class Utils {
         Actions ac=new Actions(driver);
         ac.moveToElement(element).perform();
     }
+
+    // Move the Cursor Over the Element
+    public static void scrollThePage(WebDriver driver)
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 500);");
+    }
+
+    public static int elementCount(WebDriver driver, String locatorKey)
+    {
+        By locator = LocatorReader.get(locatorKey);
+        List<WebElement> elements = driver.findElements(locator);
+        int count = elements.size();
+        return count;
+    }
+
 
 }

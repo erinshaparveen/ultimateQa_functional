@@ -1,7 +1,6 @@
 package HomePage;
 
 import base.BaseFile;
-import utils.TestDataReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
