@@ -64,7 +64,7 @@ public class HomePage {
     public void move_to_professional_summery_section()
     {
         Wait.waitForPresence(driver, "scheduleFreeSession");
-        Utils.scrollThePage(driver);
+        Utils.scrollThePage(driver, 500);
     }
 
     @Step("Verify that professional Service Section cards are displayed")
@@ -78,6 +78,19 @@ public class HomePage {
     public int six_professional_service_cards_arePresent()
     {
         return Utils.elementCount(driver, "professionalServiceCardsCount");
+    }
+
+    @Step("Scroll the Page 'UltimateQA testing solution' section")
+    public void ultimateQATestingSolutionCard()
+    {
+        Wait.waitForPresence(driver, "scheduleFreeSession");
+        Utils.scrollThePage(driver, 1000);
+    }
+
+    @Step("Scroll the Page 'UltimateQA testing solution' cards are present")
+    public int ultimateQATestingSolutionCardArePresent()
+    {
+        return Utils.elementCount(driver, "ultimateQATestingSolution");
     }
 
 }

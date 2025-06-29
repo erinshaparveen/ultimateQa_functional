@@ -63,10 +63,10 @@ public class Utils {
     }
 
     // Move the Cursor Over the Element
-    public static void scrollThePage(WebDriver driver)
+    public static void scrollThePage(WebDriver driver , int pixel)
     {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0, 500);");
+        js.executeScript("window.scrollBy(0, arguments[0]);", pixel);
     }
 
     public static int elementCount(WebDriver driver, String locatorKey)
