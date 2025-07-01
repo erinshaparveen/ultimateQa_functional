@@ -93,4 +93,25 @@ public class HomePage {
         return Utils.elementCount(driver, "ultimateQATestingSolution");
     }
 
+    @Step("Click on the Automation Program Full Story Link")
+    public void click_automation_program_fullStory_Link()
+    {
+        Utils.scrollThePage(driver, 1000);
+        Utils.clickOnElement(driver, "automationProgramFullStoryLink");
+    }
+
+    @Step("Click on the Insurance Company Full Story Link")
+    public void click_insurance_company_fullStory_Link()
+    {
+        Utils.scrollThePage(driver, 1000);
+        Utils.clickOnElement(driver, "insuranceCompanyFullStoryLink");
+    }
+
+    @Step("Click on the Faster Feedback Full Story Link")
+    public void click_faster_feedback_fullStory_Link()
+    {
+        Utils.scrollThePage(driver, 1000);
+        Utils.clickOnElement(driver, "fasterFeedbackFullStoryLink");
+    }
+
 }
