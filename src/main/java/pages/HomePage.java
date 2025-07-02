@@ -114,4 +114,11 @@ public class HomePage {
         Utils.clickOnElement(driver, "fasterFeedbackFullStoryLink");
     }
 
+    @Step("Click on the Faster ENGINEERS TRAINED Story Link")
+    public void click_engineer_trained_fullStory_Link()
+    {
+        Utils.scrollThePage(driver, 1000);
+        Utils.clickOnElement(driver, "engineersTrainedFullStoryLink");
+    }
+
 }
