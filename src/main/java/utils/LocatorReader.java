@@ -16,7 +16,11 @@ public class LocatorReader {
 
             FileInputStream sessionPageFile = new FileInputStream("src/main/java/locator/FreeSession.properties");
             properties.load(sessionPageFile);
-        } catch (IOException e) {
+
+            FileInputStream servicePageFile = new FileInputStream("src/main/java/locator/ServicePage.properties");
+            properties.load(servicePageFile);
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
