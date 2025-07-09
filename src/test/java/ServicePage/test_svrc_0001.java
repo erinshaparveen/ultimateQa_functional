@@ -8,7 +8,7 @@ import pages.ServicePage;
 
 public class test_svrc_0001 extends BaseFile {
     @Test(description = "Verify that the 'World's Best Test Automation Solutions' section is present")
-    public void educationSection() throws InterruptedException {
+    public void testAutomatinoSolution() throws InterruptedException {
         ServicePage service = new ServicePage(driver);
         HomePage home = new HomePage(driver);
 
